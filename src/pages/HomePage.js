@@ -76,7 +76,6 @@ const HomePage = () => {
   };
   return (
     <Container>
-      {/* <button onClick={handleTest}>click me</button> */}
       <Stack sx={{ display: "flex", alignItems: "center", m: "2rem" }}>
         <Typography variant="h3" sx={{ textAlign: "center" }}>
           Book Store
@@ -111,7 +110,7 @@ const HomePage = () => {
             justifyContent="space-around"
             flexWrap="wrap"
           >
-            {books.map((book) => (
+            {books?.map((book) => (
               <Card
                 key={book.id}
                 onClick={() => handleClickBook(book.id)}
